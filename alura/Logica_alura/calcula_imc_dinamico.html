@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+   function pulaLinha() {
+       document.write("<br>");
+   }
+
+   function calculaImc(peso, altura) {
+    return Math.round(peso/ (altura * altura));
+   }
+   
+   var nome = prompt("digite seu nome: "); // prompt() - captura um valor dinâmicamente que o usuário digitou e guara na variável
+   var alturaInformada = prompt("Olá " + nome + " informe sua altura");
+   var pesoInformado = parseInt(prompt(" agora informe seu peso")); // o parseInt() é uma função que vai me garantir que o que for digitado no prompt() vai ser convertido para número e não para string
+   var imc = calculaImc(pesoInformado, alturaInformada);
+
+   document.write(nome + " seu IMC é: " + imc);
+  </script>
+</body>
+</html>

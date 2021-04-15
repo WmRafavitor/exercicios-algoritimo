@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dia de nascido</title>
+</head>
+<body>
+  <div style="width: 800px; height: 70px; margin-left: 250px; background: #4169E1;">
+    <h1 style="font-size: 40px; color: #fff; text-align: center; margin-top: -2px;">DIAS DE VIDA</h1>
+  </div>
+  <div>
+      <p style="text-align: center; font-size: 25px;" id="primeiroTexto"></p><br>
+  </div>
+
+  <script>
+    var nome = prompt("Olá, digite seu nome");
+    var anoAtual = new Date().getFullYear();
+    var dataAniversario = prompt("Olá, " + nome + "informe sua data de nasciment dd/mm/aaaa");
+    var anoInformado = dataAniversario.split('/')[2]; // quebrando a data em um arrey usando a barra para separar(/)
+    var resultado = (anoAtual - anoInformado) * 365;
+    var resposta = nome + " você tem " + resultado + " dias de vida";
+
+
+    document.getElementById("primeiroTexto").innerHTML = resposta;
+
+    
+
+
+    
+
+
+  </script>
+   
+</body>
+</html>

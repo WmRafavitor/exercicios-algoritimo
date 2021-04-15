@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retangulo</title>
+</head>
+<body>
+  <div style="width: 800px; height: 70px; margin-left: 250px; background: #4169E1;">
+    <h1 style="font-size: 40px; color: #fff; text-align: center; margin-top: -2px;">MEDIDAS DE UM RETÂNGULO</h1>
+  </div>
+  <div>
+      <p style="text-align: center; font-size: 25px;" id="primeiroTexto"></p><br>
+      <p style="margin-top: -35px; text-align: center; font-size: 25px;" id="segundoTexto"></p>
+  </div>
+  <canvas style="background: #fff; margin-left: 220px; margin-top: 70px;" width="850" height="600"></canvas>
+  
+  <script>
+    var tela = document.querySelector("canvas");
+    var retangulo = tela.getContext("2d");
+
+    var eixoY = parseInt(prompt("digite a algura em 'px'"));
+    var eixoX = parseInt(prompt("digite a largura em 'px'"));
+
+   
+        var resultado = "As dimensões do seu retângulo é " + (eixoY * eixoX) + " px";
+        var textoAbaixo= "Abaixo está um modelo do seu retângulo";
+
+
+    function criaRetangulo() {
+        retangulo.fillStyle = "black";
+        retangulo.fillRect(100, 50, eixoY, eixoX);
+    }
+
+    document.getElementById("primeiroTexto").innerHTML = resultado;
+    document.getElementById("segundoTexto").innerHTML = textoAbaixo
+
+    
+    criaRetangulo();
+  
+    
+
+
+  </script>
+   
+</body>
+</html>

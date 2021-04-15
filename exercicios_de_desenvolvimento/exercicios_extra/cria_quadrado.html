@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button style="position: absolute; margin-top: 15px;">Cria Quadrado</button>
+
+    <canvas style="margin-top: 100px; margin-left: 100px; background: #E6E6FA;" width="400px" height="600px"></canvas>
+
+    <script>
+        var tela = document.querySelector("canvas");
+        var pincel = tela.getContext("2d");
+
+        var inicioX = Math.round(Math.random() *345);
+        var inicioY = Math.round(Math.random() *545);
+        
+        function criaQuadrado() {
+
+            pincel.fillStyle = "darkgreen";
+            pincel.fillRect(inicioX, inicioY, 50, 50);
+        }
+        
+
+        var createSquare = document.querySelector("button");
+        createSquare.onclick = criaQuadrado;
+    </script>
+    
+</body>
+</html>

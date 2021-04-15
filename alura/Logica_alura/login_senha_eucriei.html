@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function mostra(frase) {
+      document.write(frase);
+      document.write("<br>");
+    }
+    var loginCadastrado = "rafael"
+    var senhaCadastrada = "rafael123"
+
+    var loginInformado = prompt("informe o login :");
+    var senhaInformada = prompt("informe sua senha :");
+    var contadorDeSenha = 1;
+
+    if (loginInformado !== loginCadastrado || senhaInformada !== senhaCadastrada) {
+      while (contadorDeSenha <= 2) {
+        alert("senha inválida, tente de novo!");
+        loginInformado = prompt("informe o login :");
+        senhaInformada = prompt("informe sua senha :");
+        contadorDeSenha = contadorDeSenha + 1;
+        
+      }
+    }
+
+    if(loginInformado == loginCadastrado && senhaInformada == senhaCadastrada) {
+      alert("Você está logado");      
+    } else {
+        mostra("você excedeu o máximo de tentativas, conta temporariamente bloqueada");
+      }
+  </script>
+</body>
+</html>

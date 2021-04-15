@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Numero Eleitores</title>
+</head>
+<body>
+  <div style="width: 800px; height: 70px; margin-left: 250px; background: #4169E1;">
+    <h1 style="font-size: 40px; color: #fff; text-align: center; margin-top: -2px;">NUMERO ELEITORES</h1>
+  </div>
+  <div>
+      <p style="text-align: center; font-size: 25px;" id="primeiroTexto"></p><br>
+  </div>
+</body>  
+<script>
+
+
+	var salarioAtual = parseFloat(prompt("Digite o salário atual do funcionário"));
+	var percentualReajuste = parseInt(prompt("Digite o percentual do reajuste"));
+
+	var resultado = (salarioAtual * percentualReajuste) / 100;
+
+
+	var novoSalario = "O novo salário com reajuste de " + percentualReajuste + "% é de " + (salarioAtual + resultado);
+
+
+
+	document.getElementById("primeiroTexto").innerHTML = novoSalario;
+</script>
+   
+</body>
+</html>

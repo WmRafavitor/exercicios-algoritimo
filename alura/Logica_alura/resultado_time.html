@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+      function pulaLinha() {
+          document.write("<br>");
+      }
+
+      function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+      }
+
+      var pontosVitoria = parseInt(prompt("Digite a quantidade de vitórias: "));
+      var pontosEmpate = parseInt(prompt("Digite a quantidade de empate: "));
+      var totalPontos = pontosVitoria * 3 + pontosEmpate;
+
+      if(totalPontos > 28) {
+          mostra("Seu time está com " + totalPontos + " pontos e está melhor que o ano passado!");
+      }
+    //   o if só mostra algo se o valor que estiver entre parenteses for true
+    //   caso contrario o valor é falso e ele não mostra, por baixo dos panos  o valor que irá para 
+    //   os parenteses do if ou é true ou é false, se true ele executa o código que estra entre as chaves
+    //   se false ele passsa direto e não executa o código, um jeito te testar o código é fazer um 
+    //   if(true) {} -> o que estiver dentro da chave será executado porque coloquei um true ali, 
+    //   se tivesse colocado um false não seria executado
+      
+      if(totalPontos < 28) {
+          mostra("Seu time está com " + totalPontos + " pontos e está pior que o ano passado!");
+      }
+
+      if(totalPontos == 28) {
+          mostra("Seu time está com " + totalPontos + " pontos e está igual ao ano passado!");
+      }
+      mostra("FIM");
+  </script>
+</body>
+</html>
