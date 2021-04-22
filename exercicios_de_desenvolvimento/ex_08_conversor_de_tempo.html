@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversor de tempo</title>
+</head>
+<body>
+  <div style="width: 800px; height: 70px; margin-left: 250px; background: #4169E1;">
+    <h1 style="font-size: 40px; color: #fff; text-align: center; margin-top: -2px;">CONVERSOR DE TEMPO</h1>
+  </div>
+  <div>
+      <p style="text-align: center; font-size: 25px;" id="primeiroTexto"></p><br>
+      
+
+  </div>
+  
+  <script>
+
+    var tempoEmMinutos = parseFloat(prompt("Informe a quantidade de minutos que deseja converter:"));
+    var hora = Math.trunc(tempoEmMinutos / 60);
+    var minutos = Math.trunc(tempoEmMinutos - (hora * 60));
+    var segundos = (tempoEmMinutos - (hora * 60) - minutos) *60;
+
+    var resultadoHoras = `o tempo convertido dara  ${hora}h ${minutos}min ${segundos}s .`;
+
+    document.getElementById("primeiroTexto").innerHTML = resultadoHoras;
+
+  </script>
+   
+</body>
+</html>

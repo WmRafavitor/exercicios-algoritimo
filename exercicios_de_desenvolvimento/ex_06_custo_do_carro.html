@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valor veículo</title>
+</head>
+<body>
+  <div style="width: 800px; height: 70px; margin-left: 250px; background: #4169E1;">
+    <h1 style="font-size: 40px; color: #fff; text-align: center; margin-top: -2px;">VALOR DO VEÍULO</h1>
+  </div>
+  <div>
+      <p style="text-align: center; font-size: 25px;" id="primeiroTexto"></p><br>
+      <p style="margin-top: -35px; text-align: center; font-size: 50px;" id="segundoTexto"></p>
+
+  </div>
+  
+  <script>
+    var custoDeFabrica = parseInt(prompt("Digite o custo de Fábrica do seu veículo"));
+    var percentualDistribuidor = (custoDeFabrica / 100) * 28;
+    var impostos = (custoDeFabrica / 100) * 45;
+    var resultado = custoDeFabrica + percentualDistribuidor + impostos;
+
+
+    var valorCarroConsumidor = "Este carro vai custar para você a bagatela de " + resultado.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
+    var textoExtra = "Quer aproveitar?";
+   
+
+    document.getElementById("primeiroTexto").innerHTML = valorCarroConsumidor;
+    document.getElementById("segundoTexto").innerHTML = textoExtra;
+
+  </script>
+   
+</body>
+</html>

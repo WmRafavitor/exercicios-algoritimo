@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Número mais alto</title>
+</head>
+<body>
+  <div style="width: 800px; height: 70px; margin-left: 250px; background: #4169E1;">
+    <h1 style="font-size: 40px; color: #fff; text-align: center; margin-top: -2px;">MAIOR NÚMERO PAR DIGITADO</h1>
+  </div>
+  <div>
+      <p style="text-align: center; font-size: 25px;" id="primeiroTexto"></p><br>
+      
+
+  </div>
+  
+  <script>
+    var recebeNumeros = [];
+    var quantidadeNumero = parseInt(prompt("Digite a quantidade de número que deseja testar:"));
+
+    for(var contador = 1; contador <= quantidadeNumero; contador++) {
+        var numeros = parseInt(prompt("informe o numero " + contador));
+        recebeNumeros.push(numeros);
+    }
+
+    
+    if(numeros%2 == 0) {
+        var numeroMaior = Math.max(...recebeNumeros);    
+    }
+
+    var numeroMaior = Math.max(...recebeNumeros);
+    var numeroMaiorDigitado = "o seu maior número par digitado foi " + numeroMaior;
+    
+    document.getElementById("primeiroTexto").innerHTML = numeroMaiorDigitado;
+
+  </script>
+   
+</body>
+</html>

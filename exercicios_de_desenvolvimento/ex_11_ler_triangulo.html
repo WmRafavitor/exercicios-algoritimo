@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Retangulo</title>
+  <title>Triângulo</title>
 </head>
 <body>
   <div style="width: 800px; height: 70px; margin-left: 250px; background: #4169E1;">
-    <h1 style="font-size: 40px; color: #fff; text-align: center; margin-top: -2px;">MEDIDAS DE UM RETÂNGULO</h1>
+    <h1 style="font-size: 40px; color: #fff; text-align: center; margin-top: -2px;">MEDIDAS DE UM TRIÂNGULO</h1>
   </div>
   <div>
       <p style="text-align: center; font-size: 25px;" id="primeiroTexto"></p><br>
@@ -18,20 +18,24 @@
   
   <script>
     var tela = document.querySelector("canvas");
-    var retangulo = tela.getContext("2d");
+    var triangulo = tela.getContext("2d");
 
-    var eixoY = parseInt(prompt("digite a altura em 'px'"));
-    var eixoX = parseInt(prompt("digite a largura em 'px'"));
+    var lado1 = parseInt(prompt("Digite o primeiro lado do triângulo"));
+    var lado2 = parseInt(prompt("Digite o segundo lado do triângulo"));
+    var lado3 = parseInt(prompt("Digite o terceiro lado do triângulo"));
 
-   
-        var resultado = "As dimensões do seu retângulo é " + (eixoY * eixoX) + " px²";
-        var textoAbaixo= "Abaixo está um modelo do seu retângulo";
-
-
-    function criaRetangulo() {
-        retangulo.fillStyle = "black";
-        retangulo.fillRect(100, 50, eixoX, eixoY);
+    function ladosTriangulo() {
+        if(lado1 < (lado2 + lado3) && lado2 < (lado1 + lado3) && lado3 < (lado1 + lado2)) {
+            
+        }
     }
+
+    triangulo.fillStyle = "black";
+    triangulo.beginPath();
+    triangulo.moveTo(50, 50);
+    triangulo.lineTo(50, 400);
+    triangulo.lineTo(400, 300);
+    triangulo.fill();
 
     document.getElementById("primeiroTexto").innerHTML = resultado;
     document.getElementById("segundoTexto").innerHTML = textoAbaixo

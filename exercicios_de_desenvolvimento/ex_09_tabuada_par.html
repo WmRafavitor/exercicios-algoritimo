@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabuada</title>
+</head>
+<body>
+  <div style="width: 800px; height: 70px; margin-left: 250px; background: #4169E1;">
+    <h1 style="font-size: 40px; color: #fff; text-align: center; margin-top: -2px;">TABUADA DE NÚMEROS PARES</h1>
+  </div>
+  <script>
+   
+    function pulaLinha() {
+      document.write("<br>");
+    }
+    function mostra(texto) {
+      document.write(texto);
+      pulaLinha();
+      pulaLinha();
+    }
+    var multiplicacao = parseInt(prompt("Digite um número para multiplicação :"));
+    var numMultiplicar = 1;
+
+    function tabuadaPar() {
+      while(numMultiplicar <= 10) {
+      
+        mostra(multiplicacao + " X " + numMultiplicar + " = " + multiplicacao * numMultiplicar);
+       
+        numMultiplicar++;
+      }
+    }
+    
+    var multiplicacaoTabuada = tabuadaPar();
+ 
+  </script>
+   
+</body>
+</html>

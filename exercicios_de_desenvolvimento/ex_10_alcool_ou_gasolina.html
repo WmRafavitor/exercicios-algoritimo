@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qual combustível</title>
+</head>
+<body>
+  <div style="width: 800px; height: 70px; margin-left: 250px; background: #4169E1;">
+    <h1 style="font-size: 40px; color: #fff; text-align: center; margin-top: -2px;">QUAL COMBUSTÍVEL ABASTECER?</h1>
+  </div>
+  <div>
+      <p style="text-align: center; font-size: 25px;" id="primeiroTexto"></p><br>
+      <!-- <p style="margin-top: -35px; text-align: center; font-size: 50px;" id="segundoTexto"></p> -->
+
+  </div>
+  
+  <script>
+    var combustivelSelecionado = prompt("Considerando que o álcool está no valor de R$ 3,75 e a gasolina a R$ 5,25 digite qual combustível você quer usar:");
+    var quantidadeLitros = parseInt(prompt(`Qual a quantidade de ${combustivelSelecionado} você gostaria de abastecer?`));
+  
+    function calculaCombustivel() {
+      var descontogasosa = 1
+      if(combustivelSelecionado == "gasolina" || combustivelSelecionado == "Gasolina" || combustivelSelecionado == "GASOLINA") {
+        if( quantidadeLitros > 20) {
+          var descontogasosa = (5.25 - (5.25 / 100) * 6) * quantidadeLitros;
+          return descontogasosa;
+        }
+        if(quantidadeLitros <= 20) {
+          var descontogasosa = (5.25 - (5.25 / 100) * 4) * quantidadeLitros;
+          return descontogasosa;
+        }
+        
+      }
+
+      if(combustivelSelecionado == "alcool" || combustivelSelecionado == "álcool" || combustivelSelecionado == "ALCOOL" || combustivelSelecionado == "ÁLCOOL" || combustivelSelecionado == "Alcool" || combustivelSelecionado == "Álcool") {
+        if(quantidadeLitros > 20) {
+          var descontogasosa = (3.75 - (3.75 / 100) * 5) * quantidadeLitros;
+          return descontogasosa;
+        }
+        
+        if(quantidadeLitros <= 20) {
+          var descontogasosa = (3.75 - (3.75 / 100) * 3) * quantidadeLitros;
+          return descontogasosa;
+        }
+      }
+      
+    }
+
+    var combustivelCalculado = calculaCombustivel();
+    var textoDoResultado = `você pagará em ${quantidadeLitros} litros de ${combustivelSelecionado} o valor de ${combustivelCalculado.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`;
+    
+   
+
+    document.getElementById("primeiroTexto").innerHTML = textoDoResultado;
+    // document.getElementById("segundoTexto").innerHTML = textoExtra;
+
+  </script>
+   
+</body>
+</html>
