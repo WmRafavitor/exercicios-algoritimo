@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array sem repeticao</title>
+</head>
+<body>
+  <div style="width: 800px; height: 70px; margin-left: 250px; background: #d84e3c;">
+    <h1 style="font-size: 40px; color: #fff; text-align: center; margin-top: -2px;">ARRAY SEM REPETICAO</h1>
+  </div>
+  <div>
+      <p style="text-align: center; font-size: 25px;" id="primeiroTexto"></p><br>
+      
+
+  </div>
+  
+  <script>
+    var recebeNumeros = [];
+    var adicionaNumero = parseInt(prompt("Digite a quantidade de números que quer analizar"));
+    
+    var contador = 1;
+    while(contador <= adicionaNumero){
+      
+      var acrescentaNumero = parseInt(prompt(`Adicione o número ${contador}`))
+      var numeroExistente = acrescentaNumero;
+      var numeroJaDigitado = false;
+
+      for(var confereNumero = 0; confereNumero < recebeNumeros.length; confereNumero++){
+        if(recebeNumeros[confereNumero] == numeroExistente) {
+          numeroJaDigitado = true;
+          alert("este número já foi digitado, por favor digite outro");
+          break;
+        }
+      }
+      if(numeroJaDigitado == false) {
+          recebeNumeros.push(numeroExistente)
+          contador ++;
+        }
+    }
+
+
+    document.getElementById("primeiroTexto").innerHTML = recebeNumeros;
+
+  </script>
+   
+</body>
+</html>

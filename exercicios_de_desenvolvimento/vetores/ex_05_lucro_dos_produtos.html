@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucro dos produtos</title>
+</head>
+<body>
+  <div style="width: 800px; height: 70px; margin-left: 250px; background: #d84e3c;">
+    <h1 style="font-size: 40px; color: #fff; text-align: center; margin-top: -2px;">LUCRO DOS PRODUTOS</h1>
+  </div>
+  <div>
+      <p style="text-align: center; font-size: 15px;" id="primeiroTexto"></p><br>
+
+  </div>
+  
+  <script>
+    var precoDeCompra = [
+      {"nome": "caneta", "preco": 1}, 
+      {"nome": "lapis", "preco": 1}, 
+      {"nome": "borracha", "preco": 1}, 
+      {"nome": "apagador", "preco": 2}, 
+      {"nome": "caderno", "preco" : 5}, 
+      {"nome": "giz", "preco" : 1.50}, 
+      {"nome": "barbante", "preco": 1.20}, 
+      {"nome": "pincel atomico", "preco": 2.50}, 
+      {"nome": "compasso", "preco": 1.40}, 
+      {"nome": "lapis colorido", "preco": 1.50}
+    ];
+    var precoDeVenda = [
+      {"nome": "caneta", "preco": 1.50}, 
+      {"nome": "lapis", "preco": 1.05}, 
+      {"nome": "borracha", "preco": 1.10}, 
+      {"nome": "apagador", "preco": 2.25}, 
+      {"nome": "caderno", "preco" : 8}, 
+      {"nome": "giz", "preco" : 3}, 
+      {"nome": "barbante", "preco": 1.7}, 
+      {"nome": "pincel atomico", "preco": 3}, 
+      {"nome": "compasso", "preco": 2}, 
+      {"nome": "lapis colorido", "preco": 3}
+    ];
+
+    var recebeMsg = "";
+      for(var i = 0; i < precoDeVenda.length; i++ ) {
+        var mostraLucro = Math.round(((precoDeVenda[i].preco - precoDeCompra[i].preco) * 100) / precoDeVenda[i].preco);
+        if(mostraLucro < 10) {
+          recebeMsg += `O produto ${precoDeVenda[i].nome} está com lucro menor que 10%</br>`
+        } else if(mostraLucro >= 10 && mostraLucro < 20) {
+          recebeMsg += `O produto ${precoDeVenda[i].nome} está com lucro entre 10% e 20%</br>`
+        } else {
+          recebeMsg += `O produto ${precoDeVenda[i].nome} está com lucro maior que 20%</br>`
+        }
+        
+      }
+ 
+
+    document.getElementById("primeiroTexto").innerHTML = recebeMsg;
+  </script>
+   
+</body>
+</html>

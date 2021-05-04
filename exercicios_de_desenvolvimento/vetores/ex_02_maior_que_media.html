@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menor que a média</title>
+</head>
+<body>
+  <div style="width: 800px; height: 70px; margin-left: 250px; background: #d84e3c;">
+    <h1 style="font-size: 40px; color: #fff; text-align: center; margin-top: -2px;">MENOR QUE A MÉDIA</h1>
+  </div>
+  <div>
+      <p style="text-align: center; font-size: 25px;" id="primeiroTexto"></p><br>
+      
+
+  </div>
+  
+  <script>
+    var recebeNumeros = [];
+    var quantidadeNumero = parseInt(prompt("Digite a quantidade de número que deseja testar:"));
+    var adicionaNumero = 0;
+    var contador = 1;
+    var totalSoma = 0;
+
+    while(contador <= quantidadeNumero) {
+      var numeros = parseInt(prompt("informe o numero " + contador));
+      recebeNumeros.push(numeros);
+      contador++
+    }
+
+    while(adicionaNumero < recebeNumeros.length) {
+      totalSoma = totalSoma + recebeNumeros[adicionaNumero];
+      adicionaNumero ++;
+    }
+
+    var media = totalSoma / recebeNumeros.length;
+    function selecionaMedia() {
+      var recebeNumerosMedia = [];
+      for(var posicao = 0; posicao <= recebeNumeros.length; posicao ++) {
+        if(posicao < media) {
+          recebeNumerosMedia.push(posicao);
+        }
+      }
+      return recebeNumerosMedia;
+    }
+
+    var resultado = `Os números digitados foram ${recebeNumeros} e a soma entre eles é ${totalSoma} a média dos números é ${media}`;
+    
+    document.getElementById("primeiroTexto").innerHTML = resultado;
+
+  </script>
+   
+</body>
+</html>

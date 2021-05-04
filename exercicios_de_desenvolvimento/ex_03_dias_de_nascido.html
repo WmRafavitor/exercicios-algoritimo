@@ -17,6 +17,8 @@
   <script>
     var nome = prompt("Olá, digite seu nome");
     var anoAtual = new Date().getFullYear();
+    var mesAtual = new Date().getMonth();
+    var diaAtual = new Date().getDate();
     var dataAniversario = prompt("Olá, " + nome + "informe sua data de nasciment dd/mm/aaaa");
     var anoInformado = dataAniversario.split('/')[2]; // quebrando a data em um arrey usando a barra para separar(/)
     var resultado = (anoAtual - anoInformado) * 365;

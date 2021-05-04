@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h3>Testando funções</h3>
+    <script>
+        // está é um das formas de delcarar funções e passar os parâmetros, de uma forma simples mais mostra
+        // como pode ser usada.
+        function testaValores(valor1, valor2) {
+            var resultado = valor1 + valor2; // Os parametros prcisar estar declarado em uma variável
+            return resultado; // o resultado precisa ser retornado pela função
+        }
+        
+        var soma1 = parseInt(prompt("digite o primeiro valor:"));
+        var soma2 = parseInt(prompt("digite o segundo valor:"));
+        var resultado = testaValores(soma1, soma2);
+        document.write(resultado);
+    </script>
+</body>
+</html>
