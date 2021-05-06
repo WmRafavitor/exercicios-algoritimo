@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>classes de trabalhadores</title>
+</head>
+<body>
+  <div style="width: 800px; height: 70px; margin-left: 250px; background: #d84e3c;">
+    <h1 style="font-size: 40px; color: #fff; text-align: center; margin-top: -2px;">CLASSES DE TRABALHADORES</h1>
+  </div>
+  <div>
+      <p style="text-align: center; font-size: 15px;" id="primeiroTexto"></p><br>
+      <p style="text-align: center; font-size: 15px;" id="segundoTexto"></p><br>
+  </div>
+  
+  <script>
+    var vetNumOP = [1448, 1559, 1560, 1471, 1465, 1479, 1322, 1212, 1357, 1502, 1431, 1492, 1390, 1477, 1569];
+    var vetNumPecas = [27, 37, 40, 32, 33, 38, 28, 25, 29, 44, 29, 35, 31, 33, 37];
+    var vetSexo = [1, 1, 1, 2, 1, 2, 2, 1, 2, 2, 1, 1, 2, 1, 1];
+    var vetSalarios = [];
+
+    var recebeInformacao = "";
+
+    for(var i = 0; i < vetNumOP.length; i++) {
+      if(vetNumPecas[i] <= 30) {
+        vetSalarios.push(545);
+        recebeInformacao += `O funcionário com a matricula ${vetNumOP[i]}, do sexo ${vetSexo[i]}, faz a quantida de ${vetNumPecas[i]} e o seu salário mensal é de ${vetSalarios[i].toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</br>`;
+      } else if(vetNumPecas[i] >= 31 || vetNumPecas[i] <= 35) {
+        vetSalarios.push(545 + (((545 * 3) /100) * vetNumPecas[i]));
+        recebeInformacao += `O funcionário com a matricula ${vetNumOP[i]}, do sexo ${vetSexo[i]}, faz a quantida de ${vetNumPecas[i]} e o seu salário mensal é de ${vetSalarios[i].toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</br>`;
+      } else {
+        vetSalarios.push(545 + (((545 * 5) /100) * vetNumPecas[i]));
+        recebeInformacao += `O funcionário com a matricula ${vetNumOP[i]}, do sexo ${vetSexo[i]}, faz a quantida de ${vetNumPecas[i]} e o seu salário mensal é de ${vetSalarios[i].toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</br>`;
+      }
+    }
+    var total = 0;
+
+    for(var i = 0; i < vetSalarios.length; i++) {
+      total = total + vetSalarios[i];
+    }
+    
+    var resultado = `O total da follha de pagamento é ${total.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`
+
+    document.getElementById("primeiroTexto").innerHTML = recebeInformacao;
+    document.getElementById("segundoTexto").innerHTML = resultado;
+  </script>
+   
+</body>
+</html>

@@ -45,11 +45,11 @@
       for(var i = 0; i < precoDeVenda.length; i++ ) {
         var mostraLucro = Math.round(((precoDeVenda[i].preco - precoDeCompra[i].preco) * 100) / precoDeVenda[i].preco);
         if(mostraLucro < 10) {
-          recebeMsg += `O produto ${precoDeVenda[i].nome} está com lucro menor que 10%</br>`
+          recebeMsg += `O produto ${precoDeVenda[i].nome} está com lucro menor que 10%</br>`;
         } else if(mostraLucro >= 10 && mostraLucro < 20) {
-          recebeMsg += `O produto ${precoDeVenda[i].nome} está com lucro entre 10% e 20%</br>`
+          recebeMsg += `O produto ${precoDeVenda[i].nome} está com lucro entre 10% e 20%</br>`;
         } else {
-          recebeMsg += `O produto ${precoDeVenda[i].nome} está com lucro maior que 20%</br>`
+          recebeMsg += `O produto ${precoDeVenda[i].nome} está com lucro maior que 20%</br>`;
         }
         
       }

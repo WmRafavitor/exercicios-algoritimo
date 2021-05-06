@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media da turma</title>
+</head>
+<body>
+  <div style="width: 800px; height: 70px; margin-left: 250px; background: #d84e3c;">
+    <h1 style="font-size: 40px; color: #fff; text-align: center; margin-top: -2px;">MEDIA DA TURMA</h1>
+  </div>
+  <div>
+      <p style="text-align: center; font-size: 15px;" id="primeiroTexto"></p><br>
+      <p style="text-align: center; font-size: 15px;" id="segundoTexto"></p><br>
+      <p style="text-align: center; font-size: 15px;" id="terceiroTexto"></p><br>
+
+  </div>
+  
+  <script>
+    var mediaDaTurma = [
+      {"nome": "João", "nota": 7}, 
+      {"nome": "Paulo", "nota": 8}, 
+      {"nome": "Pedro", "nota": 5}, 
+      {"nome": "André", "nota": 3}, 
+      {"nome": "anderson", "nota" : 4}, 
+      {"nome": "Juliano", "nota" : 4}, 
+      {"nome": "Katheusia", "nota": 5}, 
+      {"nome": "Fabiana", "nota": 7}, 
+      {"nome": "Paula", "nota": 9}, 
+      {"nome": "Rafaely", "nota": 10},
+      {"nome": "Patricia", "nota": 5}, 
+      {"nome": "Débora", "nota": 1}, 
+      {"nome": "Marta", "nota": 2}, 
+      {"nome": "Marcia", "nota": 9}, 
+      {"nome": "Gabriel", "nota" : 8}, 
+      {"nome": "Heloisa", "nota" : 6}, 
+      {"nome": "Maria", "nota": 6}, 
+      {"nome": "Nestor", "nota": 5}, 
+      {"nome": "Marcos", "nota": 9}, 
+      {"nome": "Nicole", "nota": 9}
+    ];
+
+    // var recebeMsg = "";
+    // for(var i = 0; i < mediaDaTurma.length; i++ ) {
+    //   recebeMsg += ` a média de ${mediaDaTurma[i].nome} é ${mediaDaTurma[i].nota}</br>`;
+    // }
+
+    function selecionaMaiorNota(){
+      var resultado = 0;
+      for(var i = 0; i < mediaDaTurma.length; i++){
+        if(mediaDaTurma[i].nota > resultado){
+          resultado = mediaDaTurma[i].nota;
+        }
+      }
+      return `A maior nota da turma é ${resultado}`;
+    }
+
+    function selecionaMenorNota(){
+      var resultado = 10;
+      for(var i = 0; i < mediaDaTurma.length; i++){
+        if(mediaDaTurma[i].nota < resultado && mediaDaTurma[i].nota !== 0){
+          resultado = mediaDaTurma[i].nota;
+        }
+      }
+      return `A nenor nota da turma é ${resultado}`;
+    }
+    function somaNotas() {
+      var soma = 0;
+      for(var i = 0; i < mediaDaTurma.length; i++) {
+        soma = mediaDaTurma[i].nota + soma;
+      }
+      return `A média da turma é ${soma / mediaDaTurma.length}`;
+    }
+
+    var maiorNota = selecionaMaiorNota();
+    var menorNota = selecionaMenorNota();
+    var somaDasNotas = somaNotas();
+
+    document.getElementById("primeiroTexto").innerHTML = maiorNota;
+    document.getElementById("segundoTexto").innerHTML = menorNota;
+    document.getElementById("terceiroTexto").innerHTML = somaDasNotas;
+  </script>
+   
+</body>
+</html>
