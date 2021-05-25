@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Trabalhando com Funções em JavaScript</h1>
+    <button onclick="criarTabuada()">Criar Tabuada</button>
+    <button onclick="limparTabuada()">Limpar Tabuada</button>
+
+    <div id="mostraResultado"></div>
+    <script>
+
+        var resultado = document.querySelector("#mostraResultado")
+        var mensagem = "";
+
+        function criarTabuada() {
+            var numero = parseInt(prompt("Digite um número"));
+            limparTabuada();
+            for(var i = 1; i <= 100; i++) {
+                mensagem = mensagem + `${numero} x ${i} = ${numero * i} </br>`;
+            }
+            resultado.innerHTML = mensagem;
+        }
+        function limparTabuada() {
+            mensagem = "";
+            resultado.innerHTML = mensagem;
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var nome = prompt("Digite seu nome")
+        var n1 = parseInt(prompt(`Olá ${nome} digite sua primeira nota`));
+        switch(n1){
+          case 5:
+            alert("NOSSA! que baixa");
+            break;
+          case 6:
+            alert("faltou estudar um pouco né?");
+            break;
+          case 7:
+            alert("está com uma nota rasoável");
+            break;
+          case 8:
+            alert("Foi uma boa nota");
+            break;
+          case 9:
+            alert("nossa, você foi muito bem!");
+            break;
+          case 10:
+            alert("Uau, você é um gênio");
+            break;
+          default:
+            alert("sua nota foi muito baixa");
+        }
+
+
+        // if(n1 <= 5) {
+        //     alert("NOSSA! que baixa");
+        // } else if (n1 == 6 ) {
+        //     alert("faltou estudar um pouco né?");
+        // } else if( n1 == 7) {
+        //     alert("está com uma nota rasoável");
+        // } else if( n1 == 8) {
+        //     alert("Foi uma boa nota");
+        // } else if(n1 >= 9) {
+        //     alert("Uau, você é um gênio");
+        // }
+        var n2 = parseInt(prompt("Digite a segunda nota"));
+
+        if((n1 + n2) / 2 <= 5) {
+            alert("Lamento, você foi reprovado");
+        } else {
+            alert("PARABÉNS, você passou");
+        }
+    </script>
+</body>
+</html>

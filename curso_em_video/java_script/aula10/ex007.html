@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            font: normal 20px arial;
+            background: rgb(20, 87, 20);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+    <!-- <div id="area" onclick="clicar()" onmouseenter="entrou()" onmouseout="saiu()">  ESTA FORMA DE MOSTRAR O 
+        EVENTO FOI RETIRADO PARA ADICIONAR UM OUVINTE NO JAVASCRIPT E DEIXAR O CÓDIGO MAIS LIMPO-->
+        Interaja...
+    </div>
+    <script>
+        var a = document.getElementById("area");
+        a.addEventListener('click', clicar); //ESTE É UM LISTNER, ELE FICA OUVINDO UM EVENDO DE DENTRO DO JAVASCRIPT AO INVES DE FICAR NO HTML, 
+        a.addEventListener('mouseenter', entrou); // NELE DEVE SER COLOCADO O NOME DO EVENTO QUE ELE QUER EXECUTAR E A FUNÇÃO
+        a.addEventListener('mouseout', saiu); // A FUNÇÃO DEVE SER COLOCADA SEM OS PARENTESES
+        function clicar() {
+            a.innerText  = "Clicou";
+            a.style.background = "rgb(151, 5, 5)";
+        }
+        function entrou() {
+            a.innerText = "Entrou";
+        }
+        function saiu() {
+            a.innerText = "Saiu";
+            a.style.background = "rgb(20, 87, 20)"
+        }
+    </script>
+</body>
+</html>

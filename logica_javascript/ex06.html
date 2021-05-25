@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var anoBissexto = 1004;
+
+        while(anoBissexto <= 2021) {
+            if( !(anoBissexto % 100 === 0) || anoBissexto % 400 ===0) {
+                document.write(`${anoBissexto} </br>`);
+            }
+            
+            anoBissexto += 4;
+        }
+    </script>
+</body>
+</html>

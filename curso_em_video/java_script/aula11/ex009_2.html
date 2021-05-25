@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pais de Origem</title>
+</head>
+<body>
+    <h1>Pais de Origem</h1>
+    Digite o país: <input type="text" name="paisOrigem" id="paisOrigem">
+    <button onclick="mostraRes()">VERIFICAR</button>
+    <div id="res">
+
+    </div>
+
+    <script>
+        function mostraRes() {
+            var pais = document.querySelector('input#paisOrigem');
+            var paistrat = pais.value;
+            var res = document.querySelector('div#res');
+            res.innerHTML = `Vivendo em ${paistrat.toUpperCase()}`;
+            if(paistrat.toUpperCase() === 'BRASIL') {
+                res += res.innerHTML = `Você é Brasileiro`;
+            } else {
+                res += res.innerHTML = `Você é estrangeiro`;
+            }
+        }
+    </script>
+</body>
+</html>

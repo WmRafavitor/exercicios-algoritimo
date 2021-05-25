@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas style="margin-top: 100px; margin-left: 100px; background: #E6E6FA;" width="400px" height="600px"></canvas>
+
+    <script>
+        var tela = document.querySelector("canvas");
+        var pincel = tela.getContext("2d");
+
+        function fazQuadradoFracao(x, cor) {
+            pincel.fillStyle = cor;
+            pincel.fillRect(x, 0, 50, 50);
+            pincel.fillStroke = "black";
+            pincel.strokeRect(x, 0, 50, 50);
+        }
+        fazQuadradoFracao(0, "green");
+        fazQuadradoFracao(50, "green");
+        fazQuadradoFracao(100, "green");
+        fazQuadradoFracao(150, "white");
+        
+    </script>
+    
+</body>
+</html>

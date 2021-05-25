@@ -35,17 +35,16 @@
     }
 
     var media = totalSoma / recebeNumeros.length;
-    function selecionaMedia() {
-      var recebeNumerosMedia = [];
-      for(var posicao = 0; posicao <= recebeNumeros.length; posicao ++) {
-        if(posicao < media) {
-          recebeNumerosMedia.push(posicao);
-        }
-      }
-      return recebeNumerosMedia;
-    }
 
-    var resultado = `Os números digitados foram ${recebeNumeros} e a soma entre eles é ${totalSoma} a média dos números é ${media}`;
+      var recebeNumerosMedia = [];
+      for(var i = 0; i <= recebeNumeros.length; i ++) {
+        if(i < media) {
+          recebeNumerosMedia.push(i);
+        }
+      } //está mostrando a posição do array, o indice e não os valores
+
+
+    var resultado = `Os números digitados foram ${recebeNumeros} e a soma entre eles é ${totalSoma} a média dos números é ${media}</br> e os números menores que a média são ${recebeNumerosMedia}`;
     
     document.getElementById("primeiroTexto").innerHTML = resultado;
 

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Trabalhando com Funções em JavaScript</h1>
+    <div style="margin-left: 150px;">
+        <button onclick="somar()">+</button>
+        <button onclick="subtrair()">-</button>
+        <button onclick="dividir()">/</button>
+        <button onclick="multiplicar()">x</button>
+        <div style="margin-left: 30px;" id="mostraResultado"></div>
+    </div>
+    <script>
+        var numeroInicial = parseInt(prompt("Digite o número que você quer começar"));
+        var mostraResultado = document.querySelector("#mostraResultado");
+        mostraResultado.innerHTML = numeroInicial;
+        function somar() {
+            var numeroParaSoma = parseInt(prompt("Digite o número que deseja somar"));
+            numeroInicial += numeroParaSoma;
+            mostraResultado.innerHTML = numeroInicial;
+        }
+        function subtrair() {
+            var numeroParaSubtrair = parseInt(prompt("Digite o número para subtrair"));
+            numeroInicial -= numeroParaSubtrair;
+            mostraResultado.innerHTML = numeroInicial;
+        }
+        function dividir() {
+            var numeroParaDividir = parseInt(prompt("Digite um número para dividir"));
+            numeroInicial /= numeroParaDividir;
+            mostraResultado.innerHTML = numeroInicial;
+        }
+        function multiplicar() {
+            var numeroParaMultiplicar = parseInt(prompt("Digite o número para multiplicar"));
+            numeroInicial *= numeroParaMultiplicar;
+            mostraResultado.innerHTML = numeroInicial;
+        }
+    </script>
+</body>
+</html>

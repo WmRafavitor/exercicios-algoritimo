@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Trabalhando com Funções em JavaScript</h1>
+    <div style="margin-left: 150px;">
+        <button onclick="calcular('+')">+</button>
+        <button onclick="calcular('-')">-</button>
+        <button onclick="calcular('/')">/</button>
+        <button onclick="calcular('*')">x</button>
+        <div style="margin-left: 30px;" id="mostraResultado"></div>
+    </div>
+    <script>
+        var numeroInicial = parseInt(prompt("Digite o número que você quer começar"));
+        var mostraResultado = document.querySelector("#mostraResultado");
+        mostraResultado.innerHTML = numeroInicial;
+        function calcular(simbolo) {
+            var numeroParaSoma = parseInt(prompt("Digite o número que deseja somar"));
+           
+            switch(simbolo) {
+                case '+':
+                    numeroInicial += numeroParaSoma;
+                    break;
+                case '-':
+                    numeroInicial -= numeroParaSoma;
+                    break;
+                case '/':
+                    numeroInicial /= numeroParaSoma;
+                    break;
+                case '*':
+                    numeroInicial *= numeroParaSoma;
+            }
+            mostraResultado.innerHTML = numeroInicial;
+        }
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iniciando com JavaScript</title>
+    <style>
+      body {
+        background-color: rgb(118, 118, 180);
+        color: white;
+        font: normal 20pt Arial;
+      }
+    </style>
+    <h1>marcação de virgula e troca de vírgula por ponto</h1>
+</head>
+<body>
+  
+  <script>
+    var n1 = 1543.5
+    document.write(`- variável com o ponto normal: ${n1} </br>`); 
+    document.write(`- variável com o ponto com toFixed com 2 casas decimais: ${n1.toFixed(2)} </br>`);
+    document.write(`- trocando ponto por vírgula e andando duas casas decimais: ${n1.toFixed(2).replace('.',',')} </br>`);
+    document.write(`- tranformando números em moeda real: ${n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`); // se quiser trocar  moeda apenas troque o valor de currency: 'BRL', troca o BRL por USD, ou a sigla de outra moeda
+  </script>
+</body>
+</html>

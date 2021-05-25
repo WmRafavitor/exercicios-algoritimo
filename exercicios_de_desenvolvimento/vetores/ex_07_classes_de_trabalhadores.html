@@ -26,13 +26,13 @@
     for(var i = 0; i < vetNumOP.length; i++) {
       if(vetNumPecas[i] <= 30) {
         vetSalarios.push(545);
-        recebeInformacao += `O funcionário com a matricula ${vetNumOP[i]}, do sexo ${vetSexo[i]}, faz a quantida de ${vetNumPecas[i]} e o seu salário mensal é de ${vetSalarios[i].toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</br>`;
+        recebeInformacao += `O funcionário com a matricula ${vetNumOP[i]}, do sexo ${vetSexo[i]}, faz a quantida de ${vetNumPecas[i]} peças ao mês e o seu salário mensal é de ${vetSalarios[i].toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</br>`;
       } else if(vetNumPecas[i] >= 31 || vetNumPecas[i] <= 35) {
         vetSalarios.push(545 + (((545 * 3) /100) * vetNumPecas[i]));
-        recebeInformacao += `O funcionário com a matricula ${vetNumOP[i]}, do sexo ${vetSexo[i]}, faz a quantida de ${vetNumPecas[i]} e o seu salário mensal é de ${vetSalarios[i].toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</br>`;
+        recebeInformacao += `O funcionário com a matricula ${vetNumOP[i]}, do sexo ${vetSexo[i]}, faz a quantida de ${vetNumPecas[i]} peças ao mês e o seu salário mensal é de ${vetSalarios[i].toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</br>`;
       } else {
         vetSalarios.push(545 + (((545 * 5) /100) * vetNumPecas[i]));
-        recebeInformacao += `O funcionário com a matricula ${vetNumOP[i]}, do sexo ${vetSexo[i]}, faz a quantida de ${vetNumPecas[i]} e o seu salário mensal é de ${vetSalarios[i].toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</br>`;
+        recebeInformacao += `O funcionário com a matricula ${vetNumOP[i]}, do sexo ${vetSexo[i]}, faz a quantida de ${vetNumPecas[i]} peças ao mês e o seu salário mensal é de ${vetSalarios[i].toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</br>`;
       }
     }
     var total = 0;
@@ -41,7 +41,7 @@
       total = total + vetSalarios[i];
     }
     
-    var resultado = `O total da follha de pagamento é ${total.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`
+    var resultado = `<h3>O total da follha de pagamento é ${total.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</h3>`
 
     document.getElementById("primeiroTexto").innerHTML = recebeInformacao;
     document.getElementById("segundoTexto").innerHTML = resultado;
