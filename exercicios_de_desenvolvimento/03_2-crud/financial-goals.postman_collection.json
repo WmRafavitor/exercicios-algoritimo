@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "58bb4273-86e8-4695-8490-2a5fd05d758a",
+		"name": "financial-goals",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add financial goal",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Comprar uma casa\",\r\n    \"current_value\": 5,\r\n    \"target_value\": 100000,\r\n    \"expected_withdrawal_at\": \"2030-05-16\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://vast-forest-71397.herokuapp.com/api/v1/financial-goals",
+					"protocol": "https",
+					"host": [
+						"vast-forest-71397",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"financial-goals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit financial goal",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Comprar uma casa top\",\r\n    \"current_value\": 10,\r\n    \"target_value\": 160000,\r\n    \"expected_withdrawal_at\": \"2031-05-16\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://vast-forest-71397.herokuapp.com/api/v1/financial-goals/:id",
+					"protocol": "https",
+					"host": [
+						"vast-forest-71397",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"financial-goals",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remover financial goal",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://vast-forest-71397.herokuapp.com/api/v1/financial-goals/:id",
+					"protocol": "https",
+					"host": [
+						"vast-forest-71397",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"financial-goals",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get single financial goal",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://vast-forest-71397.herokuapp.com/api/v1/financial-goals/:id",
+					"protocol": "https",
+					"host": [
+						"vast-forest-71397",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"financial-goals",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List financial goals",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://vast-forest-71397.herokuapp.com/api/v1/financial-goals",
+					"protocol": "https",
+					"host": [
+						"vast-forest-71397",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"financial-goals"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

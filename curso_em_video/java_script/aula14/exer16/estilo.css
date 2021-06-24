@@ -1,0 +1,62 @@
+body {
+	background: rgb(70, 142, 236);
+	font: normal 15px Arial;
+}
+
+header {
+	color: white;
+	text-align: center;
+}
+
+section {
+    background: white;
+	border-radius: 10px;
+	padding: 15px;
+	width: 500px;
+	margin: auto;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.507);
+}
+
+.list_values {
+	padding: 15px 15px;
+}
+.values {
+	display: flex;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.fonts {
+	width: 50px;
+	font-size: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#value_start, #value_end, #value_jump {
+	height: 18px;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+#count {
+	font-size: 15px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	width: 25;
+	height: 30px;
+	margin: 0 0 10px 15px;
+	background: #020270;
+	color: #fff;
+	border-radius: 5px ;
+	letter-spacing: 1px;
+	
+}
+
+#count:hover {
+	background: #2727e9;
+}
+
+footer {
+	color: white;
+	text-align: center;
+	font-size: italic;
+}
