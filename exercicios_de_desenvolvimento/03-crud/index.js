@@ -1,5 +1,18 @@
 var dados = [];
 
+function apagaReginstro(id) {
+    let _confirm = confirm("Deseja realmente excluir este registro?");
+
+    if(_confirm) {
+        for(let i = 0; i < dados.length; i++) {
+            if(dados[i].ID == id) {
+                dados.splice(i, 1);
+            }
+        }
+        populaTabela();
+    }
+}
+
 function populaTabela() {
     if(Array.isArray(dados)) {
         
@@ -12,8 +25,10 @@ function populaTabela() {
                 <td>${item.ID}</td>
                 <td>${item.nome}</td>
                 <td>${item.sobreNome}</td>
-                <td>${item.dataNascimento}</td>
+                <td>${item.dtNascimento}</td>
                 <td>${item.formacao}</td>
+                <td><button type="button" class="btn btn-primary"><i class="fas fa-edit"></i></button></td>
+                <td><button tupe="button" class="btn btn-danger" onclick="javascript:apagaReginstro(${item.ID});"><i class="far fa-trash-alt"></i></button></td>
             </tr>`)                                        
         })
     }
@@ -35,17 +50,16 @@ $(function () {
 
         let registro = {};
 
+        registro.ID = (dados.length + 1);
         registro.nome = nome;
         registro.sobreNome = sobreNome;
         registro.dtNascimento = dtNascimento;
-        registro.formacao = formacao;
-
-        registro.ID = dados.length + 1;
+        registro.formacao = formacao;   
 
         dados.push(registro);
 
         alert("Registro salvo com sucesso");
-        $("modalRegistro").modal("hide");
+        $("#modalRegistro").modal("hide");
 
         //LIMPEZA DOS CAMPOS
         $("#txtNome").val("");
