@@ -66,6 +66,7 @@ $(function () {
 
         if(!_id || _id == "0") {
             let registro = {};
+            
             registro.nome = nome;
             registro.sobreNome = sobreNome;
             registro.dtNascimento = dtNascimento;
